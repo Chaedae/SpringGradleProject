@@ -58,8 +58,6 @@ repositories {
 
 dependencies {
     providedCompile "javax.servlet:javax.servlet-api:${ver.servletAPI}"
-    compile "org.springframework:spring-core:${ver.spring}"
-    compile "org.springframework:spring-web:${ver.spring}"
     compile "org.springframework:spring-webmvc:${ver.spring}"
     compile group: 'commons-collections', name: 'commons-collections', version: "${ver.commonsCollections}"
     testCompile group: 'junit', name: 'junit', version: "${ver.junit}"
