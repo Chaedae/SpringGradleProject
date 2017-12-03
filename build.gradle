@@ -22,6 +22,7 @@ version = '1.0.0'
 def ver = [
 	spring: '5.0.2.RELEASE',
 	servletAPI: '3.1.0',
+	jstl: '1.2.1',
 	commonsCollections: '3.2.1',
 	junit: '4.12',
 	slf4j: '1.7.12'
@@ -60,6 +61,7 @@ dependencies {
     providedCompile "javax.servlet:javax.servlet-api:${ver.servletAPI}"
     compile "org.springframework:spring-webmvc:${ver.spring}"
     compile group: 'commons-collections', name: 'commons-collections', version: "${ver.commonsCollections}"
+    compile group: 'javax.servlet.jsp.jstl', name: 'javax.servlet.jsp.jstl-api', version:"${ver.jstl}"
     testCompile group: 'junit', name: 'junit', version: "${ver.junit}"
 }
 
