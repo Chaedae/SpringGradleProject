@@ -8,7 +8,7 @@
 
 // Apply the java-library plugin to add support for Java Library
 
-apply plugin: 'java-library'
+apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 
@@ -21,11 +21,13 @@ version = '1.0.0'
 // Version Information
 def ver = [
 	spring: '5.0.2.RELEASE',
+	springJPA: '2.0.2.RELEASE',
 	servletAPI: '3.1.0',
 	jstl: '1.2.1',
 	commonsCollections: '3.2.1',
 	junit: '4.12',
-	slf4j: '1.7.12'
+	slf4j: '1.7.12',
+	hibernate: '5.2.12.Final'
 ]
 
 // Set Eclipse Gradle Build 
@@ -57,9 +59,13 @@ repositories {
     //mavenCentral()
 }
 
+
 dependencies {
     providedCompile "javax.servlet:javax.servlet-api:${ver.servletAPI}"
     compile "org.springframework:spring-webmvc:${ver.spring}"
+    compile "org.springframework:spring-orm:${ver.spring}"
+    compile "org.springframework.data:spring-data-jpa:${ver.springJPA}"
+    compile "org.hibernate:hibernate-core:${ver.hibernate}"
     compile group: 'commons-collections', name: 'commons-collections', version: "${ver.commonsCollections}"
     compile group: 'javax.servlet.jsp.jstl', name: 'javax.servlet.jsp.jstl-api', version:"${ver.jstl}"
     testCompile group: 'junit', name: 'junit', version: "${ver.junit}"
