@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 /**
- * Spring WebMVC Configuration
+ * <h1>Spring WebMVC Configuration</h1>
  * @author ChaeDae
  */
 @Configuration
