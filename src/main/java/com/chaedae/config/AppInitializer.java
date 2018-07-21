@@ -5,7 +5,7 @@ import javax.servlet.Filter;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import com.chaedae.db.config.HibernateConfig;
+import com.chaedae.db.config.MyBatisConfig;
 
 /**
  * <h1>Deployment Descriptor</h1>
@@ -20,7 +20,7 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 	 */
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] { HibernateConfig.class};
+		return new Class[] { MyBatisConfig.class};
 	}
 
 	/**

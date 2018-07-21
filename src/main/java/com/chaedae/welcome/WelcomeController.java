@@ -27,7 +27,7 @@ public class WelcomeController {
 		User user = new User();
 		user.setUserId("master");
 		model.addAttribute("user", this.userService.selectByUserId(user));
-		model.addAttribute("userList", this.userService.selectList(user));
+		model.addAttribute("userList", this.userService.selectUserList(user));
 		
 		return "welcome";
 	}

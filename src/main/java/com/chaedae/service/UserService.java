@@ -17,8 +17,8 @@ public class UserService {
 		return userDAO.selectByUserId(vo);
 	}
 	
-	public List<User> selectList(User vo) {
-		return userDAO.selectList(vo);
+	public List<User> selectUserList(User vo) {
+		return userDAO.selectUserList(vo);
 	}
 	
 	

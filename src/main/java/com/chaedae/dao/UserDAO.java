@@ -2,29 +2,16 @@ package com.chaedae.dao;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
+import org.apache.ibatis.annotations.Mapper;
 
 import com.chaedae.model.User;
 
-@Repository
-public class UserDAO {
+@Mapper
+public interface UserDAO {
 	
-	@Autowired
-	private SessionFactory sessionFactory;
-
-	@Transactional
-	public User selectByUserId(User vo) {
-		return this.sessionFactory.getCurrentSession().get(User.class, vo.getUserId());
-	}
+	public User selectByUserId(User vo);
 	
-	@SuppressWarnings("unchecked")
-	@Transactional
-	public List<User> selectList(User vo) {
-		return this.sessionFactory.getCurrentSession().createQuery("FROM TB_USER").list(); 
-	}
+	public List<User> selectUserList(User vo);
 
 
 }

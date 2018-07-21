@@ -3,15 +3,8 @@ package com.chaedae.model;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 @SuppressWarnings("serial")
-@Entity(name = "TB_USER")
-@Table(name = "TB_USER")
 public class User implements Serializable {
-	@Id
 	String userId;
 	String pwd;
 	String userNm;

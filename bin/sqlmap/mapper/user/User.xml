@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.chaedae.dao.UserDAO">
+	<select id="selectByUserId" parameterType="User" resultType="User">
+		SELECT  U.USERID
+				, U.PWD
+				, U.USERNM
+				, U.HPNO	
+				, U.EMAIL
+				, U.REGDT
+				, U.REGID
+		FROM    TB_USER U
+		WHERE   U.userid = #{userId}
+	</select>
+	
+	<select id="selectUserList" parameterType="User" resultType="User">
+		SELECT  U.USERID
+				, U.PWD
+				, U.USERNM
+				, U.HPNO	
+				, U.EMAIL
+				, U.REGDT
+				, U.REGID
+		FROM    TB_USER U
+		<where>
+		
+		</where>
+		ORDER   BY U.REGDT DESC
+	</select>
+
+</mapper>
